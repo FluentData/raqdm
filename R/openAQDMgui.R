@@ -115,7 +115,6 @@ openAQDMgui <- function() {
   paramUpdate <- function() {
     
     x <- tcltk::tclvalue(values$pc)
-    print(x)
     p <- tcltk::tclvalue(values$param)
     
     if(x != "") {

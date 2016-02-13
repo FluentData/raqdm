@@ -50,7 +50,8 @@ getAQDMlist <- function(name, ...) {
       if(class(try(cat(httr::content(httr::GET(URL)), file = f), silent = TRUE)) != "try-error") { 
         x <- read.delim(f, header= FALSE, colClasses = "character")
       } else {
-        stop("There was an error connecting to the AQDM service.")  
+        x <- data.frame(code = numeric(0), value = numeric(0))
+        warning("There was an error connecting to the AQDM service.")  
       }
       
       close(f)
