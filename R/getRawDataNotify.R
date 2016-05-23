@@ -6,7 +6,7 @@
 #'@param \dots named query parameters to be included in the query
 #'
 #'@export
-getRawData <- function(...) {
+getRawDataNotify <- function(...) {
   
   params <- list(...)
   
